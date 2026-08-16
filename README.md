@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-DSH%20Web-blue)
-![Version](https://img.shields.io/badge/version-0.3.0-orange)
+![Version](https://img.shields.io/badge/version-0.3.1-orange)
 
 ## 简介
 
@@ -116,7 +116,7 @@ pnpm install
 
 ### 方式三：zip 包安装
 
-从 GitHub Releases 下载 `dsh-excel-panel-v0.3.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
+从 GitHub Releases 下载 `dsh-excel-panel-v0.3.1.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
 
 ## 🚀 使用
 
