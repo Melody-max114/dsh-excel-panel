@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-DSH%20Web-blue)
-![Version](https://img.shields.io/badge/version-0.2.0-orange)
+![Version](https://img.shields.io/badge/version-0.3.0-orange)
 
 ## 简介
 
@@ -31,6 +31,7 @@
   - 字体大小
   - 加粗 / 斜体 / 下划线
   - 字体颜色
+  - 背景填充色
 
 - **合并单元格**
   - 拖动选择范围
@@ -41,6 +42,12 @@
   - 复制 / 粘贴 / 清除内容
   - 合并 / 取消合并
   - 插入 / 删除行和列
+
+- **键盘操作**
+  - 方向键移动选中
+  - Enter 编辑并下移
+  - Tab 右移
+  - Ctrl+Z / Ctrl+Y 撤销重做
 
 - **撤销 / 重做**
   - `Ctrl+Z` 撤销
@@ -109,7 +116,7 @@ pnpm install
 
 ### 方式三：zip 包安装
 
-从 GitHub Releases 下载 `dsh-excel-panel-v0.2.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
+从 GitHub Releases 下载 `dsh-excel-panel-v0.3.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
 
 ## 🚀 使用
 
