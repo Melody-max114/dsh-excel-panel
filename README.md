@@ -150,5 +150,3 @@ cp -r lib ~/.dsh/profiles/web/node_modules/dsh-excel-panel/
 
 当前仓库使用 [MIT](LICENSE)，允许自由使用、修改和分发。
 
-如果你不希望设置许可证，也可以直接删除 `LICENSE` 文件，并在 README 中移除 License 章节。
-
