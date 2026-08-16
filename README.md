@@ -61,12 +61,19 @@
 
 ## 📦 安装
 
-> **v0.2.0 尚未发布到 npm**，当前推荐两种方式：
-> 1. 从 GitHub Releases 下载 zip 包安装；
-> 2. 使用本地 file 依赖安装。
-> 等后续发布 npm 后，可直接 `dsh plugin --profile web add dsh-excel-panel`。
+### 方式一：npm 安装（推荐）
 
-### 方式一：本地 file 依赖
+```bash
+dsh plugin --profile web add dsh-excel-panel
+```
+
+或者直接安装到项目：
+
+```bash
+npm install dsh-excel-panel
+```
+
+### 方式二：本地 file 依赖
 
 将插件目录放到本地，例如：
 
@@ -100,7 +107,7 @@ dsh plugin --profile web add file:D:/apps/DP专武/dsh-excel-panel
 pnpm install
 ```
 
-### 方式二：zip 包安装
+### 方式三：zip 包安装
 
 从 GitHub Releases 下载 `dsh-excel-panel-v0.2.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
 
