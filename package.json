@@ -29,5 +29,28 @@
     "dsh-better-sidebar": "^0.12.0",
     "react": "^18.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "DEBUG_V2.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melody-max114/dsh-excel-panel.git"
+  },
+  "homepage": "https://github.com/Melody-max114/dsh-excel-panel#readme",
+  "bugs": {
+    "url": "https://github.com/Melody-max114/dsh-excel-panel/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "excel",
+    "xlsx",
+    "editor",
+    "better-sidebar"
+  ]
 }
