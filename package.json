@@ -1,0 +1,33 @@
+{
+  "name": "dsh-excel-panel",
+  "version": "0.1.0",
+  "description": "Editable xlsx viewer for dsh-better-sidebar: open Excel files in the right panel, edit cells/formulas, live recalc and save back to disk.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
+    "dsh-better-sidebar": "^0.12.0",
+    "react": "^18.2.0"
+  },
+  "license": "MIT"
+}

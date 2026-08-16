@@ -1,0 +1,5 @@
+# dsh-excel-panel bundle patch: registers editable xlsx viewer with higher
+# priority than the read-only Office preview plugin.
+- insert:
+    - id: excel-panel
+      name: 'dsh-excel-panel'
