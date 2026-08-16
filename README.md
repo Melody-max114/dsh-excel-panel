@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-DSH%20Web-blue)
-![Version](https://img.shields.io/badge/version-0.1.0-orange)
+![Version](https://img.shields.io/badge/version-0.2.0-orange)
 
 ## 简介
 
@@ -61,6 +61,11 @@
 
 ## 📦 安装
 
+> **v0.2.0 尚未发布到 npm**，当前推荐两种方式：
+> 1. 从 GitHub Releases 下载 zip 包安装；
+> 2. 使用本地 file 依赖安装。
+> 等后续发布 npm 后，可直接 `dsh plugin --profile web add dsh-excel-panel`。
+
 ### 方式一：本地 file 依赖
 
 将插件目录放到本地，例如：
@@ -97,14 +102,14 @@ pnpm install
 
 ### 方式二：zip 包安装
 
-解压 `dsh-excel-panel-0.1.0.zip` 到任意目录，再按方式一添加 file 依赖即可。
+从 GitHub Releases 下载 `dsh-excel-panel-v0.2.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
 
 ## 🚀 使用
 
 1. 重启 DSH Web。
 2. 在右侧栏打开任意 `.xlsx` 文件。
-3. 点击单元格或在上方 `fx` 栏输入公式，例如 `=D2*0.15`。
-4. 使用格式工具栏调整字体、颜色、合并等。
+3. 单击选中单元格，双击编辑文字；也可以在上方 `fx` 栏输入公式，例如 `=D2*0.15`。
+4. 多选范围后，使用格式工具栏批量调整字体、下划线、颜色等。
 5. 点击右上角「保存」写回磁盘原文件。
 
 ## ⌨️ 快捷键
