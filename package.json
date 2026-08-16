@@ -1,7 +1,7 @@
 {
   "name": "dsh-excel-panel",
   "version": "0.1.0",
-  "description": "Editable xlsx viewer for dsh-better-sidebar: open Excel files in the right panel, edit cells/formulas, live recalc and save back to disk.",
+  "description": "DSH 右侧栏 Excel 编辑插件：支持 xlsx 预览/编辑、公式实时计算、合并单元格、格式设置并保存回原文件。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

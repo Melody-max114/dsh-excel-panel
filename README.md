@@ -50,6 +50,15 @@
   - 自动检测外部文件修改
   - 手动「刷新」按钮
 
+
+## 🙏 致谢 / 基于
+
+本插件基于 [dsh-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) 的文件查看器扩展机制开发，使用其 `registerFileViewer` 能力在右侧栏注册可编辑的 Excel 预览。
+
+同时参考了 Excel 的交互方式，以及 DSH 右侧面板/Office 预览类插件的设计思路。
+
+> 如果原插件作者认为需要额外声明或调整归属，请联系本仓库作者补充。
+
 ## 📦 安装
 
 ### 方式一：本地 file 依赖
@@ -139,4 +148,7 @@ cp -r lib ~/.dsh/profiles/web/node_modules/dsh-excel-panel/
 
 ## 📄 License
 
-[MIT](LICENSE)
+当前仓库使用 [MIT](LICENSE)，允许自由使用、修改和分发。
+
+如果你不希望设置许可证，也可以直接删除 `LICENSE` 文件，并在 README 中移除 License 章节。
+
