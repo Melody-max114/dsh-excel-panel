@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-DSH%20Web-blue)
-![Version](https://img.shields.io/badge/version-0.3.3-orange)
+![Version](https://img.shields.io/badge/version-0.6.0-orange)
 
 ## 简介
 
@@ -17,54 +17,62 @@
 
 ## ✨ 功能特性
 
-- **可编辑 Excel 网格**
-  - 行号 / 列标 / 工作表标签
-  - 底部 Sheet 栏 + `+` 新建工作表
-  - 单元格直接编辑，支持公式栏 `fx`
+### 交互
 
-- **公式实时推导**
-  - 支持 `+ - * / ^`、单元格/区域引用
-  - 支持常用函数：`SUM`、`ROUND`、`IF`、`MAX`、`MIN`、`AVERAGE`、`COUNT`、`ABS`、`INT`、`LEN`、`UPPER`、`LOWER`
-  - 编辑时自动重算相关公式
+- 单击选中单元格
+- 双击编辑文字
+- 点击空白处取消选中
+- 拖动 / Shift+点击多选范围
+- 多选范围使用淡蓝色半透明叠加，不遮挡单元格底色
 
-- **格式化**
-  - 字体大小
-  - 加粗 / 斜体 / 下划线
-  - 字体颜色
-  - 背景填充色
+### 格式工具栏
 
-- **合并单元格**
-  - 拖动选择范围
-  - 合并 / 取消合并
-  - 保存合并区域到 xlsx
+- 字体大小下拉框
+  - 多选时如果字体大小不一致，显示空白“字号”
+- 加粗 `B` / 斜体 `I` / 下划线 `U`
+  - 多选时能识别统一状态
+- 左对齐 / 居中 / 右对齐
+- 字体颜色菜单
+  - 20 个标准色
+  - 自定义颜色：5 个自定义色块 + RGB 滑块 + HEX 输入
+- 背景颜色菜单
+  - 20 个标准色
+  - 自定义颜色：5 个自定义色块 + RGB 滑块 + HEX 输入
 
-- **右键菜单**
-  - 复制 / 粘贴 / 清除内容
-  - 合并 / 取消合并
-  - 插入 / 删除行和列
+### 自定义颜色
 
-- **键盘操作**
-  - 方向键移动选中
-  - Enter 编辑并下移
-  - Tab 右移
-  - Ctrl+Z / Ctrl+Y 撤销重做
+- 左键点击自定义色块：直接使用该颜色
+- 右键点击自定义色块：打开内嵌色盘设置颜色
+- 色盘内支持：
+  - 40 个快速选色
+  - RGB 三通道滑块
+  - HEX 输入框
+  - 预览色块
+  - `✓` 确认按钮
 
-- **撤销 / 重做**
-  - `Ctrl+Z` 撤销
-  - `Ctrl+Y` / `Ctrl+Shift+Z` 重做
+### 单元格与工作表
 
-- **实时刷新**
-  - 自动检测外部文件修改
-  - 手动「刷新」按钮
+- 公式栏 `fx`
+- 公式实时推导：
+  - `+ - * / ^`、单元格/区域引用
+  - `SUM`、`ROUND`、`IF`、`MAX`、`MIN`、`AVERAGE`、`COUNT`、`ABS`、`INT`、`LEN`、`UPPER`、`LOWER`
+- 合并 / 取消合并
+- 插入 / 删除行和列
+- 列宽 / 行高拖拽调整
+- 底部 Sheet 栏 + 新建工作表
+- 右键菜单：复制 / 粘贴 / 清除 / 合并 / 插入删除行列
 
+### 保存
 
-## 🙏 致谢 / 基于
+- 每次保存都会**重建整个 xlsx**，避免样式表逐步损坏
+- 多次保存格式不丢失
+- 保存失败时提示具体原因
+- 文件被占用时提供“关闭占用程序并重试”
 
-本插件基于 [dsh-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) 的文件查看器扩展机制开发，使用其 `registerFileViewer` 能力在右侧栏注册可编辑的 Excel 预览。
+### 撤销 / 重做
 
-同时参考了 Excel 的交互方式，以及 DSH 右侧面板/Office 预览类插件的设计思路。
-
-> 如果原插件作者认为需要额外声明或调整归属，请联系本仓库作者补充。
+- `Ctrl+Z` 撤销
+- `Ctrl+Y` / `Ctrl+Shift+Z` 重做
 
 ## 📦 安装
 
@@ -94,36 +102,16 @@ D:\apps\DP专武\dsh-excel-panel
 dsh plugin --profile web add file:D:/apps/DP专武/dsh-excel-panel
 ```
 
-或者手动在 `package.json` 添加：
-
-```json
-"dependencies": {
-  "dsh-excel-panel": "file:D:/apps/DP专武/dsh-excel-panel"
-}
-```
-
-并在 `dsh.profile.bundles` 中加入：
-
-```json
-"dsh-excel-panel"
-```
-
-然后执行：
-
-```bash
-pnpm install
-```
-
 ### 方式三：zip 包安装
 
-从 GitHub Releases 下载 `dsh-excel-panel-v0.3.3.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
+从 GitHub Releases 下载 `dsh-excel-panel-v0.6.0.zip`，解压到任意目录，再按方式一添加 file 依赖即可。
 
 ## 🚀 使用
 
 1. 重启 DSH Web。
 2. 在右侧栏打开任意 `.xlsx` 文件。
 3. 单击选中单元格，双击编辑文字；也可以在上方 `fx` 栏输入公式，例如 `=D2*0.15`。
-4. 多选范围后，使用格式工具栏批量调整字体、下划线、颜色等。
+4. 多选范围后，使用格式工具栏批量调整字体、颜色、对齐等。
 5. 点击右上角「保存」写回磁盘原文件。
 
 ## ⌨️ 快捷键
@@ -133,7 +121,10 @@ pnpm install
 | `Ctrl+Z` | 撤销 |
 | `Ctrl+Y` / `Ctrl+Shift+Z` | 重做 |
 | 按住 Shift 点击 | 选择范围 |
-| 鼠标拖动 | 选择范围 / 填充（右下角小方块） |
+| 鼠标拖动 | 选择范围 |
+| 双击 | 编辑单元格 |
+| `Enter` | 编辑时确认并下移 |
+| `Tab` | 编辑时右移 |
 
 ## 🧩 插件结构
 
@@ -142,6 +133,8 @@ dsh-excel-panel/
 ├── package.json
 ├── cordis.patch.yml
 ├── README.md
+├── CHANGELOG.md
+├── DEBUG_V2.md
 └── lib/
     ├── index.js      # 后端：读取/写入 xlsx
     └── client.js     # 前端：Excel 编辑器 UI
@@ -152,7 +145,9 @@ dsh-excel-panel/
 | 方法 | 路径 | 说明 |
 | --- | --- | --- |
 | `POST` | `/excel-panel/read` | 读取 xlsx，返回单元格数据、公式、样式、合并区域 |
-| `POST` | `/excel-panel/write` | 将编辑后的数据写回原 xlsx |
+| `POST` | `/excel-panel/write` | 重建并写回 xlsx |
+| `POST` | `/excel-panel/unlock` | 关闭占用目标文件的进程 |
+| `POST` | `/excel-panel/log` | 写入操作日志 |
 
 ## ⚙️ 开发
 
@@ -168,4 +163,3 @@ cp -r lib ~/.dsh/profiles/web/node_modules/dsh-excel-panel/
 ## 📄 License
 
 当前仓库使用 [MIT](LICENSE)，允许自由使用、修改和分发。
-
