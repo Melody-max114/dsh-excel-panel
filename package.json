@@ -1,6 +1,6 @@
 {
   "name": "dsh-excel-panel",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "DSH 右侧栏 Excel 编辑插件 v2：支持多工作表、单击选中/双击编辑、多选批量格式、色盘单步撤销、选中动画，并保存回原文件。",
   "type": "module",
   "main": "lib/index.js",
